@@ -1,0 +1,441 @@
+{
+    "intents": [
+        {
+            "tag": "greetings",
+            "patterns": [
+                "Hello",
+                "Hi",
+                "Good afternoon",
+                "Good morning",
+                "Good evening",
+                "Hey",
+                "Good day"
+            ],
+            "responses": [
+                "Hello, how can I help?"
+            ]
+        },
+        {
+            "tag": "disabled_access",
+            "patterns": [
+                "Do you have disabled access?",
+                "Is the hotel wheelchair accessible?",
+                "Do you have wheelchair ramps?",
+                "Are your rooms accessible?",
+                "Is there step-free access?",
+                "Can disabled guests stay at your hotel?",
+                "Is your hotel suitable for people with mobility issues?"
+            ],
+            "responses": [
+                "Yes, our hotel is fully accessible for disabled guests, including ramps, elevators, and accessible rooms."
+            ]
+        },
+        {
+            "tag": "smoke_policies",
+            "patterns": [
+                "Do you allow smoking?",
+                "Can I smoke in the hotel?",
+                "Where can I smoke?",
+                "Is smoking allowed in the rooms?"
+            ],
+            "responses": [
+                "Our hotel is a smoke-free property. However, we do have a designated outside smoking area"
+            ]
+        },
+        {
+            "tag": "pet_policies",
+            "patterns": [
+                "Do you allow pets?",
+                "Are pets allowed?",
+                "Can I bring my dog?",
+                "Is the hotel pet friendly?",
+                "Do you accept cats or dogs?",
+                "What\u2019s your pet policy?"
+            ],
+            "responses": [
+                "For the comfort of all guests, we don\u2019t allow pets to stay in the hotel, except for service dogs."
+            ]
+        },
+        {
+            "tag": "car_park_directions",
+            "patterns": [
+                "Do you have parking?",
+                "Is there a car park at the hotel?",
+                "Where can I park?",
+                "How do I get to the hotel?",
+                "Can you give me directions?",
+                "Where is the hotel located?",
+                "Directions to your hotel?",
+                "What's the best way to get there?"
+            ],
+            "responses": [
+                "Yes, we offer free on-site parking. Directions to the hotel can be found on our website or through Google Maps."
+            ]
+        },
+        {
+            "tag": "car_park_price",
+            "patterns": [
+                "How much is car parking?",
+                "How much is it to park my car?",
+                "Is parking free?"
+            ],
+            "responses": [
+                "Guests of our hotel receive free on-site parking."
+            ]
+        },
+        {
+            "tag": "rooms",
+            "patterns": [
+                "Tell me about your rooms",
+                "What room types do you have?",
+                "Room options?",
+                "Can I see the rooms?",
+                "Do you have suites?",
+                "Do the rooms have air conditioning?What are your room features?",
+                "How many people can stay in a room?",
+                "Do you have family rooms?",
+                "What amenities come with the rooms?"
+            ],
+            "responses": [
+                "We offer standard, deluxe, and suite rooms, all equipped with Wi-Fi, air conditioning, en-suite bathrooms, and comfortable bedding."
+            ]
+        },
+        {
+            "tag": "facilities",
+            "patterns": [
+                "What facilities do you offer?",
+                "Do you have a gym?",
+                "Is there a spa?",
+                "Hotel amenities?",
+                "Do you have a pool?",
+                "What services do you provide?",
+                "Can I use the gym?",
+                "Is there a bar or restaurant?",
+                "Are there any leisure facilities?"
+            ],
+            "responses": [
+                "Our facilities include a fitness center, spa, swimming pool, restaurant, and 24/7 room service."
+            ]
+        },
+        {
+            "tag": "meetings_events",
+            "patterns": [
+                "Can I book a meeting room?",
+                "Do you host events?",
+                "Meeting room availability?",
+                "Do you have conference rooms?",
+                "Can I hold a wedding at the hotel?",
+                "Event spaces?",
+                "Do you offer business meeting facilities?",
+                "Can I organise a party there?",
+                "Are events allowed at the hotel?"
+            ],
+            "responses": [
+                "Yes, we have fully equipped meeting rooms and event spaces available for booking. Please contact our events team for details events@ourhotel.com"
+            ]
+        },
+        {
+            "tag": "feedback_complaints",
+            "patterns": [
+                "I want to leave feedback",
+                "I have a complaint",
+                "How do I give a review?",
+                "Can I submit a complaint?",
+                "Where can I leave feedback?",
+                "Customer service issue",
+                "I had a bad experience",
+                "How do I talk to a manager?",
+                "Can I speak to someone about a problem?"
+            ],
+            "responses": [
+                "We value your feedback. Please email us at feedback@ourhotel.com or speak to reception for immediate assistance."
+            ]
+        },
+        {
+            "tag": "contact_us",
+            "patterns": [
+                "How can I contact the hotel?",
+                "Hotel phone number?",
+                "Customer support?",
+                "Email address?",
+                "How do I reach you?",
+                "Is there someone I can call?",
+                "What's your contact info?",
+                "I need to talk to the hotel"
+            ],
+            "responses": [
+                "You can reach us by phone at 01234 567890 or email info@ourhotel.com. Our front desk is available 24/7."
+            ]
+        },
+        {
+            "tag": "book_room",
+            "patterns": [
+                "I want to book a room",
+                "Can I reserve a room?",
+                "I need a hotel booking"
+            ],
+            "responses": [
+                "Sure! What type of room would you like to book?",
+                "Of course! Please provide your check-in and check-out dates."
+            ]
+        },
+        {
+            "tag": "cancel_booking",
+            "patterns": [
+                "I want to cancel my booking",
+                "Can I get a refund?",
+                "Cancel my reservation"
+            ],
+            "responses": [
+                "I'm sorry to hear that. Please provide your booking ID to proceed with the cancellation.",
+                "Your cancellation is being processed. Refund details will be sent to your email."
+            ]
+        },
+        {
+            "tag": "amend_booking",
+            "patterns": [
+                "Can I change my check-out date?",
+                "I need to upgrade my room",
+                "Modify my reservation"
+            ],
+            "responses": [
+                "We can help with that! What changes would you like to make to your booking?",
+                "Sure, let me check availability for the requested amendment."
+            ]
+        },
+        {
+            "tag": "room_rates",
+            "patterns": [
+                "How much does a room cost?",
+                "What are your room prices?",
+                "Tell me about the rates"
+            ],
+            "responses": [
+                "Standard rooms start at \u00a3120 per night, Deluxe at \u00a3180, and Suites at \u00a3250.",
+                "Our rates vary by room type and season. Would you like a specific date?"
+            ]
+        },
+        {
+            "tag": "make_payment",
+            "patterns": [
+                "How can I pay for my booking?",
+                "What payment methods do you accept?",
+                "Can I pay by card?"
+            ],
+            "responses": [
+                "We accept Debit/Credit cards, Bank Transfers, and PayPal.",
+                "You can pay securely through our website or upon arrival at the hotel."
+            ]
+        },
+        {
+            "tag": "group_booking",
+            "patterns": [
+                "Do you offer group bookings?",
+                "Can I book multiple rooms?",
+                "I need a reservation for a group"
+            ],
+            "responses": [
+                "Yes, we offer group booking discounts! How many guests will be staying?",
+                "We can arrange group accommodations. Please provide details of your group size and dates."
+            ]
+        },
+        {
+            "tag": "business_guest",
+            "patterns": [
+                "Do you have corporate rates?",
+                "I'm a business traveler",
+                "Can I book a meeting room?"
+            ],
+            "responses": [
+                "Yes, we offer business packages and meeting room facilities.",
+                "We have special rates for business travelers. Would you like more information?"
+            ]
+        },
+        {
+            "tag": "food_options",
+            "patterns": [
+                "Do you offer breakfast?",
+                "What dining options are available?",
+                "Can I get room service?"
+            ],
+            "responses": [
+                "Yes, we offer a full English breakfast, vegan options, and room service.",
+                "Our dining services include buffet breakfast and afternoon tea."
+            ]
+        },
+        {
+            "tag": "arrival_departure",
+            "patterns": [
+                "What time is check-in?",
+                "Can I get an early check-in?",
+                "When do I have to check out?"
+            ],
+            "responses": [
+                "Check-in is from 3:00 PM, and check-out is by 12:00 PM.",
+                "Early check-in is subject to availability. Would you like me to check for you?"
+            ]
+        },
+        {
+            "tag": "late_check_out",
+            "patterns": [
+                "Can I check out late?",
+                "Is late check-out available?"
+            ],
+            "responses": [
+                "Late check-out is available upon request and subject to availability.",
+                "We offer late check-out for an additional fee. Would you like to proceed?"
+            ]
+        },
+        {
+            "tag": "parking_availability",
+            "patterns": [
+                "Do you have parking?",
+                "Is there parking at the hotel?"
+            ],
+            "responses": [
+                "Yes, we offer free on-site parking",
+                "Parking is available, but spaces are limited. Would you like to reserve one?"
+            ]
+        },
+        {
+            "tag": "special_requests",
+            "patterns": [
+                "Can I request a baby cot?",
+                "Do you provide wheelchair access?",
+                "I need an extra bed"
+            ],
+            "responses": [
+                "Yes, we can accommodate special requests. Please let us know your needs in advance.",
+                "We offer baby cots and extra beds upon request. Would you like to add one to your booking?"
+            ]
+        },
+        {
+            "tag": "loyalty_programme",
+            "patterns": [
+                "Do you have a loyalty programme?",
+                "Can I earn points for my stay?"
+            ],
+            "responses": [
+                "Yes, we have a loyalty programme where you can earn points for every stay.",
+                "Join our loyalty programme and get exclusive discounts and rewards!"
+            ]
+        },
+        {
+            "tag": "room_pricing",
+            "patterns": [
+                "How much is a room per night?",
+                "What are your price ranges?",
+                "Do you have different prices for weekdays and weekends?",
+                "When is it cheaper to stay?",
+                "Weekend rates?",
+                "Weekday rates?",
+                "How much is a deluxe room?",
+                "Are prices higher during holidays?",
+                "Can you tell me your room rates?",
+                "What do your rooms cost?",
+                "Is breakfast included in the price?",
+                "Do you offer discounts for longer stays?",
+                "What\u2019s the cheapest room you have?"
+            ],
+            "responses": [
+                "Our room prices vary depending on the type of room and the season. Standard rooms start from \u00a380 per night, while deluxe rooms start from \u00a3120.",
+                "Weekend and holiday rates may be slightly higher. For specific pricing, please check our website or contact us directly via email at info@ourhotel.com.",
+                "We also offer discounts for extended stays and advance bookings. Let us know your dates and we can provide a quote, you can contact us directly via email at info@ourhotel.com"
+            ]
+        },
+        {
+            "tag": "room_availability",
+            "patterns": [
+                "Do you have any rooms available next weekend?",
+                "Do you have availability over the Easter bank holiday?",
+                "Are you fully booked on the August bank holiday weekend?",
+                "Any rooms available for the Jubilee weekend?",
+                "Are there any rooms left for the Christmas holidays?",
+                "Can I book for the late May bank holiday?",
+                "Is there availability for the New Year's Eve?",
+                "Can I stay during the school half term?",
+                "Are you busy during the October half term?",
+                "Is the hotel available for Easter weekend?",
+                "Can I book for the Spring bank holiday?",
+                "Are rooms open during the Christmas break?",
+                "Can I stay over New Year\u2019s?",
+                "Is there any availability during the summer holidays?",
+                "Do you have availability during the February half term?",
+                "Can I book a room for the winter break?",
+                "Are you taking bookings for the early May bank holiday?",
+                "Are there any last-minute rooms available?",
+                "How far in advance can I book?How far in advance can I make a booking?"
+            ],
+            "responses": [
+                "Holiday periods such as Easter, bank holidays, and school breaks tend to book up quickly. Please check our website or contact us directly for the most accurate availability.",
+                "Yes, we often have rooms available during UK holidays, but early booking is highly recommended.",
+                "We would love to host you over the bank holiday or half term! Give us a call on 01234567890 or visit our booking page to check availability.",
+                "Rooms get booked up quickly during Christmas, New Year, and school holidays. We recommend booking in advance to secure your stay.",
+                "You can check availability online, or contact our team for holiday-specific openings. We are happy to help!",
+                "You can book your stay up to 12 months in advance, please vsit our booking page to check availability"
+            ]
+        },
+        {
+            "tag": "family_friendly",
+            "patterns": [
+                "Do you have facilities for children?",
+                "Is the hotel child-friendly?",
+                "Can I bring my kids?",
+                "Do you offer high chairs or baby cots?",
+                "Is there a play area for kids?"
+            ],
+            "responses": [
+                "Yes, we welcome families! We offer baby cots, high chairs, and child-friendly menu options. Let us know your needs in advance."
+            ]
+        },
+        {
+            "tag": "hygiene_safety",
+            "patterns": [
+                "What are your cleaning procedures?",
+                "Is the hotel following COVID safety guidelines?",
+                "Are rooms cleaned daily?",
+                "Do you provide hand sanitiser?",
+                "Is there contactless check-in?"
+            ],
+            "responses": [
+                "We follow enhanced cleaning protocols for your safety. Hand sanitiser is available throughout the hotel, and contactless check-in is available upon request."
+            ]
+        },
+        {
+            "tag": "local_area",
+            "patterns": [
+                "What is there to do nearby?",
+                "Are there any restaurants near the hotel?",
+                "How far is the train station?",
+                "Is the hotel close to public transport?",
+                "What's the nearest attraction?"
+            ],
+            "responses": [
+                "Our hotel is located close to local attractions and public transport. We would be happy to recommend nearby restaurants, sights, or give you directions"
+            ]
+        },
+        {
+            "tag": "wifi_support",
+            "patterns": [
+                "Is there Wi-Fi?",
+                "Is there wifi?",
+                "Is there WiFi?",
+                "Is there Wifi?",
+                "Is there WIFI?",
+                "Is there wireless internet availableDo your rooms have internet?",
+                "Is the Wi-Fi free?",
+                "How do I connect to the Wi-Fi?"
+            ],
+            "responses": [
+                "Yes, we offer free high-speed Wi-Fi throughout the hotel."
+            ]
+        },
+        {
+            "tag": "default",
+            "patterns": [],
+            "responses": [
+                "I'm here to help with any questions about OUR hotel. Could you please rephrase or ask about rooms, facilities, or hotel information?"
+            ]
+        }
+    ]
+}
