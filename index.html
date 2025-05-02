@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ABC Hotels Chatbot</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  
+  <div class="chatbox">
+    <div>
+      <header>
+        <img src="/static/ABC hotels_1.jpg" alt="ABC Hotels Logo" >
+         <h4> Welcome to ABC Hotels Chatbot</h4> 
+      </header>
+    </div>
+    <div id="chatlog" class="chatlog"></div>
+    <form id="chat-form">
+      <input type="text" id="user-input" autocomplete="off" placeholder="Type your message..." required>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("chat-form");
+    const input = document.getElementById("user-input");
+    const chatlog = document.getElementById("chatlog");
+
+    form.onsubmit = async (e) => {
+      e.preventDefault();
+      const userText = input.value;
+      chatlog.innerHTML += `<div class="user-msg"><strong>You:</strong> ${userText}</div>`;
+      input.value = "";
+
+      const res = await fetch("/get", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: `msg=${encodeURIComponent(userText)}`
+      });
+
+      const botReply = await res.text();
+      chatlog.innerHTML += `<div class="bot-msg"><strong>Bot:</strong> ${botReply}</div>`;
+      chatlog.scrollTop = chatlog.scrollHeight;
+    };
+  </script>
+</body>
+</html>
