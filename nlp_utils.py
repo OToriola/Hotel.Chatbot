@@ -4,7 +4,7 @@ import random
 import numpy as np
 import nltk
 from nltk.tokenize import word_tokenize
-from tensorflow.keras.models import load_model  # ✅ This line must be here!
+from tensorflow.keras.models import load_model  
 
 # Download tokenizer if not available
 nltk.download("punkt")
