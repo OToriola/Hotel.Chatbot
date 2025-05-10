@@ -117,3 +117,55 @@ test_sentences = [
 for sentence in test_sentences:
     response = chatbot_response(sentence)
     print(f"Input: '{sentence}' → Response: {response}")
+
+# ---Please uncomment the test cases below for predict_intent and chatbot response validation---
+'''
+from nlp_utils import predict_intent
+
+# Define test cases
+
+test_cases = [
+    ("Hi", "greetings"),
+    ("Is the hotel wheelchair accessible?", "disabled_access"),
+    ("Do you have ramps?", "disabled_access"),
+    ("What time is check-out?", "unknown"),
+    ("Good evening", "greetings"),
+    ("I want to see the pool", "unknown"),
+    ("Do disabled guests stay for free?", "disabled_access"),  
+    ("Yo", "greetings") 
+]
+
+# Run tests
+threshold = 0.80 #(Threshold variation used 0.60,0.70,0.80)
+print(f"\nTesting model with {int(threshold * 100)}% threshold:")
+for i, (input_text, expected_tag) in enumerate(test_cases, 1):
+    tag, confidence, response = predict_intent(input_text)
+    result = "✔ PASS" if tag == expected_tag else f"❌ FAIL (Got '{tag}')"
+    print(f"Test {i}: '{input_text}' → Expected: '{expected_tag}' | Predicted: '{tag}' | Confidence: {confidence:.2f} → {result}")
+    print(f"→ Response: {response}\n")
+'''
+
+ 
+'''
+# Define test cases: (input_text, expected_response_contains)
+test_cases = [
+    ("Hi", "how can I help"),  # greetings
+    ("Is the hotel wheelchair accessible?", "accessible for disabled guests"),  # disabled_access
+    ("Do you have ramps?", "accessible for disabled guests"),  # disabled_access
+    ("What time is check-out?", "didn't quite understand"),  # fallback
+    ("Good evening", "how can I help"),  # greetings
+    ("I want to see the pool", "didn't quite understand"),  # fallback
+    ("Do disabled guests stay for free?", "accessible for disabled guests"),  # may vary
+    ("Yo", "how can I help")  # might fallback
+]
+
+# Run tests
+threshold = 0.60  # (Threshold variation used 0.60,0.70,0.80)
+print(f"\nTesting model with {int(threshold * 100)}% threshold:")
+print("\nRunning Chatbot Response Validation...\n")
+
+for i, (input_text, expected_snippet) in enumerate(test_cases, 1):
+    response = chatbot_response(input_text)
+    result = "✔ PASS" if expected_snippet.lower() in response.lower() else f"❌ FAIL (Got: '{response}')"
+    print(f"Test {i}: '{input_text}' → Response: '{response}' → {result}")
+'''
